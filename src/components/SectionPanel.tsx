@@ -175,7 +175,9 @@ export default function SectionPanel() {
         </motion.div>
 
         {/* 5 Panelists - Portrait Cards */}
-        <div className="flex gap-4 overflow-x-auto pb-4 md:pb-0 md:grid md:grid-cols-5 md:gap-5 md:overflow-visible snap-x snap-mandatory md:snap-none">
+        {/* Mobile scroll hint */}
+        <p className="text-cream/40 text-xs text-center mb-3 md:hidden">← Swipe to see all panelists →</p>
+        <div className="flex gap-4 overflow-x-auto pb-4 md:pb-0 md:grid md:grid-cols-5 md:gap-5 md:overflow-visible snap-x snap-mandatory md:snap-none [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] md:[mask-image:none]">
           {panelists.map((panelist, index) => {
             const colors = colorClasses[panelist.color];
             const regionStyle = regionColors[panelist.regionColor] || { bg: "bg-orange/20", text: "text-orange" };
@@ -228,14 +230,14 @@ export default function SectionPanel() {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="text-cream/70 text-xs leading-relaxed line-clamp-2"
+                      className={`text-cream/70 text-xs leading-relaxed ${isExpanded ? "" : "line-clamp-2"}`}
                     >
                       {isExpanded ? panelist.bio : panelist.shortBio}
                     </motion.p>
                   </AnimatePresence>
 
                   {/* Expand indicator */}
-                  <div className="mt-3 flex items-center justify-center gap-1 text-cream/40">
+                  <div className="mt-3 flex items-center justify-center gap-1 text-cream/60">
                     <span className="text-xs">{isExpanded ? "Less" : "More"}</span>
                     <motion.svg
                       animate={{ rotate: isExpanded ? 180 : 0 }}
