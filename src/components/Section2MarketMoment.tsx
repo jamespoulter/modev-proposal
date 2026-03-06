@@ -81,8 +81,15 @@ export default function Section2MarketMoment() {
   return (
     <section
       ref={containerRef}
-      className="min-h-screen flex flex-col items-center justify-center relative px-6 py-24 bg-navy-light"
+      className="min-h-screen flex flex-col items-center justify-center relative px-6 py-24 bg-navy-light overflow-hidden"
     >
+      {/* Data visualization background texture */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-[0.06]"
+        style={{ backgroundImage: "url(https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80)" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-navy-light via-transparent to-navy-light" />
+
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}

@@ -100,8 +100,16 @@ Sent from Jabra Voice AI Programme microsite
   return (
     <section
       ref={containerRef}
-      className="min-h-screen flex flex-col items-center justify-center relative px-6 py-24"
+      className="min-h-screen flex flex-col items-center justify-center relative px-6 py-24 overflow-hidden"
     >
+      {/* Professional meeting background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-[0.08]"
+        style={{ backgroundImage: "url(https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1920&q=80)" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-transparent to-navy" />
+
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}

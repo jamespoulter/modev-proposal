@@ -5,6 +5,13 @@ import { motion } from "framer-motion";
 export default function Section1Welcome() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-6 pt-24 md:pt-20">
+      {/* Subtle full-bleed background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-[0.12]"
+        style={{ backgroundImage: "url(https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80)" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy" />
+
       {/* Geometric accent shapes */}
       <div className="absolute top-20 right-20 w-72 h-72 border border-orange/20 rounded-full animate-pulse hidden sm:block" />
       <div className="absolute bottom-32 left-16 w-48 h-48 border border-lime/20 rotate-45 hidden sm:block" />

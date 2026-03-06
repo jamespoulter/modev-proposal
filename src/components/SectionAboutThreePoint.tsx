@@ -24,10 +24,15 @@ export default function SectionAboutThreePoint() {
     <section
       ref={ref}
       id="about"
-      className="min-h-screen flex flex-col justify-center relative px-6 py-24 bg-navy"
+      className="min-h-screen flex flex-col justify-center relative px-6 py-24 bg-navy overflow-hidden"
     >
       {/* Top accent */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange/30 to-transparent" />
+
+      {/* Decorative SVG geometric accents */}
+      <div className="absolute -top-48 -right-48 w-[600px] h-[600px] rounded-full border border-orange/[0.04] pointer-events-none" />
+      <div className="absolute -bottom-32 -left-32 w-[450px] h-[450px] rounded-full bg-indigo/[0.025] pointer-events-none" />
+      <div className="absolute top-1/3 left-10 w-[300px] h-[300px] rounded-full border-2 border-lime/[0.03] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto w-full z-10">
 

@@ -65,8 +65,13 @@ export default function Section6PricingTiers() {
   return (
     <section
       ref={containerRef}
-      className="min-h-screen flex flex-col items-center justify-center relative px-6 py-24 bg-navy-light"
+      className="min-h-screen flex flex-col items-center justify-center relative px-6 py-24 bg-navy-light overflow-hidden"
     >
+      {/* Decorative SVG geometric accents */}
+      <div className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full border border-gold/[0.05] pointer-events-none" />
+      <div className="absolute -bottom-48 -right-48 w-[500px] h-[500px] rounded-full bg-orange/[0.025] pointer-events-none" />
+      <div className="absolute top-1/2 -right-20 w-[350px] h-[350px] rounded-full border-2 border-lime/[0.04] pointer-events-none" />
+
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}

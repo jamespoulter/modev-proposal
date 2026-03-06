@@ -61,8 +61,14 @@ export default function Section4WhatDelivers() {
   return (
     <section
       ref={containerRef}
-      className="min-h-screen flex flex-col items-center justify-center relative px-6 py-24 bg-navy-light"
+      className="min-h-screen flex flex-col items-center justify-center relative px-6 py-24 bg-navy-light overflow-hidden"
     >
+      {/* Decorative SVG geometric accents */}
+      <div className="absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full bg-orange/[0.03] pointer-events-none" />
+      <div className="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full border-2 border-indigo/[0.05] pointer-events-none" />
+      <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] rounded-full border border-lime/[0.04] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-gold/10 rounded-full" />
+
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}

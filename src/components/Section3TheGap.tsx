@@ -26,8 +26,20 @@ export default function Section3TheGap() {
   return (
     <section
       ref={containerRef}
-      className="min-h-screen flex flex-col items-center justify-center relative px-6 py-24"
+      className="min-h-screen flex flex-col items-center justify-center relative px-6 py-24 overflow-hidden"
     >
+      {/* Architectural background texture */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-[0.05]"
+        style={{ backgroundImage: "url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80)" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy via-transparent to-navy" />
+
+      {/* Decorative SVG accents */}
+      <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full border border-orange/[0.04] pointer-events-none" />
+      <div className="absolute -bottom-48 -left-48 w-[500px] h-[500px] rounded-full border-2 border-indigo/[0.05] pointer-events-none" />
+      <div className="absolute top-1/4 right-10 w-3 h-3 bg-lime/20 rounded-full" />
+
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}

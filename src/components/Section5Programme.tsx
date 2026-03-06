@@ -119,8 +119,15 @@ export default function Section5Programme() {
   return (
     <section
       ref={containerRef}
-      className="min-h-screen flex flex-col items-center justify-start relative px-4 sm:px-6 py-16 sm:py-24"
+      className="min-h-screen flex flex-col items-center justify-start relative px-4 sm:px-6 py-16 sm:py-24 overflow-hidden"
     >
+      {/* World map / global connectivity background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-[0.06]"
+        style={{ backgroundImage: "url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80)" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-navy via-transparent to-navy" />
+
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
