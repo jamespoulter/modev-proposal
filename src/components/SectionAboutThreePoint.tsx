@@ -7,8 +7,8 @@ import Image from "next/image";
 const credentials = [
   { label: "250+", detail: "Keynotes delivered globally" },
   { label: "20yrs", detail: "In digital & AI transformation" },
-  { label: "£1B+", detail: "Revenue influenced for clients" },
-  { label: "Global", detail: "UK · US · Europe · Middle East" },
+  { label: "Former", detail: "Director of Programming, VOICE Summit" },
+  { label: "Aug 2026", detail: "AI @ Work — Bloomsbury book launch" },
 ];
 
 const clients = [
@@ -59,7 +59,7 @@ export default function SectionAboutThreePoint() {
           transition={{ duration: 0.5, delay: 0.05 }}
           className="text-orange text-sm font-medium tracking-widest uppercase mb-4 block"
         >
-          Your Partner
+          About ThreePoint
         </motion.span>
 
         <motion.h2
@@ -68,7 +68,7 @@ export default function SectionAboutThreePoint() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-4xl md:text-6xl font-bold text-cream mb-6 max-w-3xl"
         >
-          About ThreePoint
+          Who We Are
         </motion.h2>
 
         <motion.p
@@ -77,10 +77,9 @@ export default function SectionAboutThreePoint() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-xl text-cream/75 max-w-3xl mb-16"
         >
-          ThreePoint Labs is a specialist AI transformation consultancy. We help
-          the world&apos;s leading organisations cut through the hype, build practical
-          AI strategies, and embed lasting change — with clarity, rigour, and
-          genuine expertise.
+          ThreePoint Labs is JP Poulter&apos;s AI transformation consultancy — helping the world&apos;s
+          leading organisations cut through the hype, build practical AI strategies, and embed
+          lasting change. Trusted by Amazon, LEGO, Verizon, Bloomsbury, Universal Music, Bosch.
         </motion.p>
 
         {/* Two-column layout */}
@@ -107,7 +106,7 @@ export default function SectionAboutThreePoint() {
               <div>
                 <h3 className="text-cream font-bold text-xl mb-0.5">James Poulter</h3>
                 <p className="text-orange text-sm font-medium">Founder & CEO, ThreePoint Labs</p>
-                <p className="text-cream/50 text-sm">Programme Convener & Chair</p>
+                <p className="text-cream/50 text-sm">Former Director of Programming, VOICE Summit</p>
               </div>
             </div>
 
@@ -122,71 +121,45 @@ export default function SectionAboutThreePoint() {
               Formerly Head of Emerging Platforms at <span className="text-cream font-medium">The LEGO Group</span>,
               where he launched LEGO Life to over 2 million users, and CEO of{" "}
               <span className="text-cream font-medium">Vixen Labs</span> — the pioneering voice AI
-              studio he founded and exited to House 337 in 2023 — James brings rare depth in
-              both strategic advisory and the practical mechanics of voice AI deployment.
+              studio he founded and exited to House 337 in 2023. Currently Fractional Head of AI
+              at <span className="text-cream font-medium">Elvis London</span> and{" "}
+              <span className="text-cream font-medium">Dunham &amp; Company</span>.
             </p>
 
             <p className="text-cream/70 leading-relaxed">
-              James currently serves as Fractional Head of AI at{" "}
-              <span className="text-cream font-medium">Elvis London</span> and{" "}
-              <span className="text-cream font-medium">Dunham &amp; Company</span>, advises the{" "}
+              His book <span className="text-lime italic">AI @ Work</span> publishes with Bloomsbury in August 2026 —
+              right in the middle of the AI House Tour. JP advises the{" "}
               <span className="text-cream font-medium">Church of England&apos;s digital board</span> on AI ethics,
               and sits on the board of <span className="text-cream font-medium">Christian Aid</span>.
-              His book <span className="text-lime italic">AI @ Work</span> publishes with Bloomsbury in August 2026.
-              As Programme Convener, he will chair all panel sessions, shape the research agenda,
-              and lead the Copenhagen and New York workshops.
             </p>
           </motion.div>
 
-          {/* Right — ThreePoint credentials + clients */}
+          {/* Right — ThreePoint credentials */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.4 }}
             className="flex flex-col gap-8"
           >
-            {/* What we do */}
-            <div className="bg-navy-light rounded-2xl p-8 border border-cream/10">
-              <h4 className="text-cream font-bold text-lg mb-4">What ThreePoint Does</h4>
+            {/* Why ThreePoint for Modev */}
+            <div className="bg-navy-light rounded-2xl p-8 border border-orange/20">
+              <h4 className="text-cream font-bold text-lg mb-4">Why ThreePoint for the AI House Tour</h4>
               <ul className="space-y-3 text-cream/70 text-sm leading-relaxed">
                 <li className="flex gap-3">
                   <span className="text-orange mt-0.5 flex-shrink-0">▸</span>
-                  <span><span className="text-cream font-medium">AI Strategy &amp; Transformation</span> — helping organisations move from AI ambition to embedded, measurable change</span>
+                  <span><span className="text-cream font-medium">Modev insider</span> — JP was Director of Programming at VOICE Summit. He doesn't need a briefing; he knows the culture and what these events need to be great.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-orange mt-0.5 flex-shrink-0">▸</span>
-                  <span><span className="text-cream font-medium">Research &amp; Intelligence</span> — market research programmes, landscape analysis, and expert panel facilitation</span>
+                  <span><span className="text-cream font-medium">Book launch platform</span> — AI @ Work (Bloomsbury, August 2026) lands mid-tour. Every event becomes a launch moment with fresh, book-anchored content.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-orange mt-0.5 flex-shrink-0">▸</span>
-                  <span><span className="text-cream font-medium">Executive Education &amp; Keynotes</span> — equipping leadership teams with the frameworks to lead AI confidently</span>
+                  <span><span className="text-cream font-medium">European market depth</span> — London-based with existing relationships across UK and European enterprise AI. Indispensable for the June sprint across London and Paris.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-orange mt-0.5 flex-shrink-0">▸</span>
-                  <span><span className="text-cream font-medium">Ethics &amp; Governance</span> — developing robust AI policies grounded in human values and practical rigour</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Why ThreePoint for this programme */}
-            <div className="bg-navy-light rounded-2xl p-8 border border-cream/10">
-              <h4 className="text-cream font-bold text-lg mb-4">Why ThreePoint for This Programme</h4>
-              <ul className="space-y-3 text-cream/70 text-sm leading-relaxed">
-                <li className="flex gap-3">
-                  <span className="text-lime mt-0.5 flex-shrink-0">✓</span>
-                  <span>Deep roots in the voice AI ecosystem — James co-founded Vixen Labs, the UK&apos;s leading voice AI studio</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-lime mt-0.5 flex-shrink-0">✓</span>
-                  <span>Existing relationships with the global voice AI expert community — the panel isn&apos;t assembled cold</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-lime mt-0.5 flex-shrink-0">✓</span>
-                  <span>Independent and agenda-free — we are not a hardware or software vendor; our only interest is rigorous insight</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-lime mt-0.5 flex-shrink-0">✓</span>
-                  <span>Track record with enterprise clients at the intersection of AI strategy and communications</span>
+                  <span><span className="text-cream font-medium">Commercial instinct</span> — JP isn&apos;t just a speaker. He actively supports sponsorship development using his own network, invested in Modev&apos;s commercial success.</span>
                 </li>
               </ul>
             </div>
@@ -201,7 +174,7 @@ export default function SectionAboutThreePoint() {
                   transition={{ duration: 0.5, delay: 0.5 + i * 0.1 }}
                   className="bg-navy-light rounded-xl p-5 border border-cream/10 text-center"
                 >
-                  <div className="text-2xl font-bold text-orange mb-1">{c.label}</div>
+                  <div className="text-xl font-bold text-orange mb-1">{c.label}</div>
                   <div className="text-cream/60 text-xs leading-snug">{c.detail}</div>
                 </motion.div>
               ))}

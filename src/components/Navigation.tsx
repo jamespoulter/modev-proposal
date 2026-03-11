@@ -6,21 +6,22 @@ import Image from "next/image";
 
 interface NavigationProps {
   activeSection: string;
+  sections?: { id: string; label: string }[];
 }
 
-const sections = [
+const defaultSections = [
   { id: "welcome", label: "Welcome" },
-  { id: "market", label: "Market" },
-  { id: "gap", label: "The Gap" },
-  { id: "delivers", label: "Delivers" },
-  { id: "programme", label: "Programme" },
-  { id: "panel", label: "Panel" },
-  { id: "pricing", label: "Tiers" },
+  { id: "market", label: "The Tour" },
+  { id: "gap", label: "The Case" },
+  { id: "delivers", label: "Services" },
+  { id: "programme", label: "Events" },
+  { id: "panel", label: "JP" },
+  { id: "pricing", label: "Investment" },
   { id: "about", label: "ThreePoint" },
   { id: "next", label: "Next Steps" },
 ];
 
-export default function Navigation({ activeSection }: NavigationProps) {
+export default function Navigation({ activeSection, sections = defaultSections }: NavigationProps) {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showPdfToast, setShowPdfToast] = useState(false);
@@ -39,7 +40,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = "Jabra-Voice-AI-Research-Programme-Proposal.pdf";
+      link.download = "Modev-AI-House-Tour-2026-Strategic-Partner-Proposal.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -63,7 +64,6 @@ export default function Navigation({ activeSection }: NavigationProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu when section changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [activeSection]);
@@ -122,7 +122,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
                 })}
               </div>
 
-              {/* PDF Download + Prepared for Jabra */}
+              {/* PDF Download + Prepared for Modev */}
               <div className="hidden md:flex items-center gap-4">
                 <button
                   onClick={handlePdfDownload}
@@ -144,7 +144,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
                 </button>
                 <div className="flex items-center gap-2 text-sm">
                   <span className="text-cream/60">Prepared for</span>
-                  <span className="text-orange font-semibold">Jabra</span>
+                  <span className="text-orange font-semibold">Modev</span>
                 </div>
               </div>
 
@@ -223,7 +223,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
                 </div>
                 <div className="mt-4 pt-4 border-t border-cream/10 flex items-center justify-center gap-2 text-sm">
                   <span className="text-cream/60">Prepared for</span>
-                  <span className="text-orange font-semibold">Jabra</span>
+                  <span className="text-orange font-semibold">Modev</span>
                 </div>
               </div>
             </motion.div>

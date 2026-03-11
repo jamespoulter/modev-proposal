@@ -10,8 +10,8 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Jabra Voice AI Research Programme | ThreePoint",
-  description: "A strategic research programme positioning Jabra as the authority on Voice AI in the workplace",
+  title: "Strategic Programme Partner — AI House Tour 2026 | ThreePoint",
+  description: "A proposal from James Poulter & ThreePoint to partner with Modev on the AI House Tour 2026 series.",
   icons: {
     icon: "/threepoint-icon.png",
     shortcut: "/threepoint-icon.png",

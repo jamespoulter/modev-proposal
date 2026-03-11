@@ -11,7 +11,7 @@ export default function PasswordGate() {
   const router = useRouter();
 
   useEffect(() => {
-    const isAuthenticated = sessionStorage.getItem("jabra-auth");
+    const isAuthenticated = sessionStorage.getItem("modev-auth");
     if (isAuthenticated === "true") {
       router.push("/proposal");
     } else {
@@ -21,8 +21,8 @@ export default function PasswordGate() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "jabra2026") {
-      sessionStorage.setItem("jabra-auth", "true");
+    if (password === "modev2026") {
+      sessionStorage.setItem("modev-auth", "true");
       router.push("/proposal");
     } else {
       setError(true);
@@ -62,11 +62,11 @@ export default function PasswordGate() {
             </span>
           </motion.div>
           <h1 className="text-4xl md:text-5xl font-bold text-cream mb-4">
-            Voice AI Research
-            <span className="block text-orange">Programme</span>
+            AI House Tour
+            <span className="block text-orange">2026</span>
           </h1>
           <p className="text-cream/60 text-lg">
-            Prepared for Jabra by ThreePoint
+            Prepared for Modev by ThreePoint
           </p>
         </div>
 

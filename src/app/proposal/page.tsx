@@ -17,12 +17,12 @@ import Section7NextSteps from "@/components/Section7NextSteps";
 
 const sections = [
   { id: "welcome", label: "Welcome" },
-  { id: "market", label: "Market" },
-  { id: "gap", label: "The Gap" },
-  { id: "delivers", label: "Delivers" },
-  { id: "programme", label: "Programme" },
-  { id: "panel", label: "Panel" },
-  { id: "pricing", label: "Tiers" },
+  { id: "market", label: "The Tour" },
+  { id: "gap", label: "The Case" },
+  { id: "delivers", label: "Services" },
+  { id: "programme", label: "Events" },
+  { id: "panel", label: "JP" },
+  { id: "pricing", label: "Investment" },
   { id: "about", label: "ThreePoint" },
   { id: "next", label: "Next Steps" },
 ];
@@ -35,7 +35,7 @@ export default function ProposalPage() {
   const router = useRouter();
 
   useEffect(() => {
-    const auth = sessionStorage.getItem("jabra-auth");
+    const auth = sessionStorage.getItem("modev-auth");
     if (auth !== "true") {
       router.push("/");
     } else {
@@ -63,7 +63,6 @@ export default function ProposalPage() {
         }
       }
 
-      // Show back-to-top button after scrolling 500px
       setShowBackToTop(window.scrollY > 500);
     };
 
@@ -94,7 +93,7 @@ export default function ProposalPage() {
   return (
     <main className="relative bg-navy">
       {/* Top Navigation */}
-      <Navigation activeSection={activeSection} />
+      <Navigation activeSection={activeSection} sections={sections} />
 
       {/* Side Navigation dots */}
       <nav className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-3">
@@ -124,32 +123,32 @@ export default function ProposalPage() {
         <Section1Welcome />
       </div>
 
-      {/* Section 2: The Market Moment */}
+      {/* Section 2: The AI House Tour */}
       <div id="market">
         <Section2MarketMoment />
       </div>
 
-      {/* Section 3: The Gap */}
+      {/* Section 3: The Case */}
       <div id="gap">
         <Section3TheGap />
       </div>
 
-      {/* Section 4: What This Delivers */}
+      {/* Section 4: Services */}
       <div id="delivers">
         <Section4WhatDelivers />
       </div>
 
-      {/* Section 5: The Programme */}
+      {/* Section 5: Events */}
       <div id="programme">
         <Section5Programme />
       </div>
 
-      {/* Section 6: The Panel */}
+      {/* Section 6: JP Credentials */}
       <div id="panel">
         <SectionPanel />
       </div>
 
-      {/* Section 7: Choose Your Level */}
+      {/* Section 7: Investment */}
       <div id="pricing">
         <Section6PricingTiers />
       </div>
@@ -177,7 +176,7 @@ export default function ProposalPage() {
                 className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity"
               />
               <span className="text-cream/30 text-sm">|</span>
-              <span className="text-cream/40 text-sm">Confidential proposal prepared for Jabra / GN Audio</span>
+              <span className="text-cream/40 text-sm">Confidential proposal prepared for Modev</span>
             </div>
             <p className="text-cream/30 text-sm">&copy; {new Date().getFullYear()} ThreePoint Labs. All rights reserved.</p>
           </div>
